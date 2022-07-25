@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4360A05288CFCFE00B2095D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */; };
+		F4360A07288D229E00B2095D /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4360A06288D229E00B2095D /* SettingTableViewCell.swift */; };
+		F494AB87288CE12100B66FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494AB86288CE12100B66FBA /* AppDelegate.swift */; };
+		F494AB89288CE12100B66FBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494AB88288CE12100B66FBA /* SceneDelegate.swift */; };
+		F494AB90288CE12200B66FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F494AB8F288CE12200B66FBA /* Assets.xcassets */; };
+		F494AB93288CE12200B66FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494AB91288CE12200B66FBA /* LaunchScreen.storyboard */; };
+		F494AB9D288CE1EE00B66FBA /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494AB9C288CE1EE00B66FBA /* PopupViewController.swift */; };
+		F494AB9F288CE20200B66FBA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494AB9E288CE20200B66FBA /* MainViewController.swift */; };
+		F494ABA3288CE21500B66FBA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABA2288CE21500B66FBA /* DetailViewController.swift */; };
+		F494ABA5288CE23A00B66FBA /* IntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABA4288CE23A00B66FBA /* IntroCollectionViewCell.swift */; };
+		F494ABA7288CE24B00B66FBA /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABA6288CE24B00B66FBA /* Intro.storyboard */; };
+		F494ABA9288CE25600B66FBA /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABA8288CE25600B66FBA /* Popup.storyboard */; };
+		F494ABAB288CE26000B66FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABAA288CE26000B66FBA /* Main.storyboard */; };
+		F494ABAD288CE26800B66FBA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABAC288CE26800B66FBA /* Setting.storyboard */; };
+		F494ABAF288CE27100B66FBA /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABAE288CE27100B66FBA /* Detail.storyboard */; };
+		F494ABB1288CE29200B66FBA /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB0288CE29200B66FBA /* Tamagotchi.swift */; };
+		F494ABB3288CE2A200B66FBA /* TamagotchiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB2288CE2A200B66FBA /* TamagotchiInfo.swift */; };
+		F494ABBD288CE43000B66FBA /* IntroCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		F4360A06288D229E00B2095D /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		F494AB83288CE12100B66FBA /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F494AB86288CE12100B66FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F494AB88288CE12100B66FBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F494AB8F288CE12200B66FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F494AB92288CE12200B66FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F494AB94288CE12200B66FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F494AB9C288CE1EE00B66FBA /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		F494AB9E288CE20200B66FBA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F494ABA2288CE21500B66FBA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F494ABA4288CE23A00B66FBA /* IntroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewCell.swift; sourceTree = "<group>"; };
+		F494ABA6288CE24B00B66FBA /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		F494ABA8288CE25600B66FBA /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
+		F494ABAA288CE26000B66FBA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F494ABAC288CE26800B66FBA /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		F494ABAE288CE27100B66FBA /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		F494ABB0288CE29200B66FBA /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
+		F494ABB2288CE2A200B66FBA /* TamagotchiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiInfo.swift; sourceTree = "<group>"; };
+		F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F494AB80288CE12100B66FBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F494AB7A288CE12100B66FBA = {
+			isa = PBXGroup;
+			children = (
+				F494AB85288CE12100B66FBA /* Tamagotchi */,
+				F494AB84288CE12100B66FBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F494AB84288CE12100B66FBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F494AB83288CE12100B66FBA /* Tamagotchi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F494AB85288CE12100B66FBA /* Tamagotchi */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABBA288CE34500B66FBA /* Application */,
+				F494ABB9288CE2F500B66FBA /* Model */,
+				F494ABBB288CE38E00B66FBA /* Scene */,
+				F494AB8F288CE12200B66FBA /* Assets.xcassets */,
+				F494AB91288CE12200B66FBA /* LaunchScreen.storyboard */,
+				F494AB94288CE12200B66FBA /* Info.plist */,
+			);
+			path = Tamagotchi;
+			sourceTree = "<group>";
+		};
+		F494ABB4288CE2D500B66FBA /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABA6288CE24B00B66FBA /* Intro.storyboard */,
+				F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */,
+				F494ABA4288CE23A00B66FBA /* IntroCollectionViewCell.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		F494ABB5288CE2DC00B66FBA /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABA8288CE25600B66FBA /* Popup.storyboard */,
+				F494AB9C288CE1EE00B66FBA /* PopupViewController.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		F494ABB6288CE2E500B66FBA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABAA288CE26000B66FBA /* Main.storyboard */,
+				F494AB9E288CE20200B66FBA /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F494ABB7288CE2E900B66FBA /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABAC288CE26800B66FBA /* Setting.storyboard */,
+				F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */,
+				F4360A06288D229E00B2095D /* SettingTableViewCell.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		F494ABB8288CE2EE00B66FBA /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABAE288CE27100B66FBA /* Detail.storyboard */,
+				F494ABA2288CE21500B66FBA /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F494ABB9288CE2F500B66FBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABB0288CE29200B66FBA /* Tamagotchi.swift */,
+				F494ABB2288CE2A200B66FBA /* TamagotchiInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F494ABBA288CE34500B66FBA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F494AB86288CE12100B66FBA /* AppDelegate.swift */,
+				F494AB88288CE12100B66FBA /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F494ABBB288CE38E00B66FBA /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABB4288CE2D500B66FBA /* Intro */,
+				F494ABB5288CE2DC00B66FBA /* Popup */,
+				F494ABB6288CE2E500B66FBA /* Main */,
+				F494ABB7288CE2E900B66FBA /* Setting */,
+				F494ABB8288CE2EE00B66FBA /* Detail */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F494AB82288CE12100B66FBA /* Tamagotchi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F494AB97288CE12200B66FBA /* Build configuration list for PBXNativeTarget "Tamagotchi" */;
+			buildPhases = (
+				F494AB7F288CE12100B66FBA /* Sources */,
+				F494AB80288CE12100B66FBA /* Frameworks */,
+				F494AB81288CE12100B66FBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tamagotchi;
+			productName = Tamagotchi;
+			productReference = F494AB83288CE12100B66FBA /* Tamagotchi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F494AB7B288CE12100B66FBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					F494AB82288CE12100B66FBA = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = F494AB7E288CE12100B66FBA /* Build configuration list for PBXProject "Tamagotchi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F494AB7A288CE12100B66FBA;
+			productRefGroup = F494AB84288CE12100B66FBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F494AB82288CE12100B66FBA /* Tamagotchi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F494AB81288CE12100B66FBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F494AB93288CE12200B66FBA /* LaunchScreen.storyboard in Resources */,
+				F494ABAB288CE26000B66FBA /* Main.storyboard in Resources */,
+				F494AB90288CE12200B66FBA /* Assets.xcassets in Resources */,
+				F494ABA7288CE24B00B66FBA /* Intro.storyboard in Resources */,
+				F494ABAF288CE27100B66FBA /* Detail.storyboard in Resources */,
+				F494ABA9288CE25600B66FBA /* Popup.storyboard in Resources */,
+				F494ABAD288CE26800B66FBA /* Setting.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F494AB7F288CE12100B66FBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4360A07288D229E00B2095D /* SettingTableViewCell.swift in Sources */,
+				F494ABB1288CE29200B66FBA /* Tamagotchi.swift in Sources */,
+				F494AB87288CE12100B66FBA /* AppDelegate.swift in Sources */,
+				F494AB89288CE12100B66FBA /* SceneDelegate.swift in Sources */,
+				F494ABBD288CE43000B66FBA /* IntroCollectionViewController.swift in Sources */,
+				F4360A05288CFCFE00B2095D /* SettingTableViewController.swift in Sources */,
+				F494ABB3288CE2A200B66FBA /* TamagotchiInfo.swift in Sources */,
+				F494ABA5288CE23A00B66FBA /* IntroCollectionViewCell.swift in Sources */,
+				F494AB9D288CE1EE00B66FBA /* PopupViewController.swift in Sources */,
+				F494AB9F288CE20200B66FBA /* MainViewController.swift in Sources */,
+				F494ABA3288CE21500B66FBA /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F494AB91288CE12200B66FBA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F494AB92288CE12200B66FBA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F494AB95288CE12200B66FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F494AB96288CE12200B66FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F494AB98288CE12200B66FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M526U856M5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Intro;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haha1haka.Tamagotchi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F494AB99288CE12200B66FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M526U856M5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Intro;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haha1haka.Tamagotchi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F494AB7E288CE12100B66FBA /* Build configuration list for PBXProject "Tamagotchi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F494AB95288CE12200B66FBA /* Debug */,
+				F494AB96288CE12200B66FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F494AB97288CE12200B66FBA /* Build configuration list for PBXNativeTarget "Tamagotchi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F494AB98288CE12200B66FBA /* Debug */,
+				F494AB99288CE12200B66FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F494AB7B288CE12100B66FBA /* Project object */;
+}
