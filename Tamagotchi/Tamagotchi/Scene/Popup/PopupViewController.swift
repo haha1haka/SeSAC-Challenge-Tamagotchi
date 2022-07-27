@@ -13,7 +13,6 @@ class PopupViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
@@ -30,13 +29,16 @@ class PopupViewController: UIViewController {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate =  windowScene?.delegate as? SceneDelegate
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        let vc = sb.instantiateViewController(withIdentifier: "MainViewController")
+        as! MainViewController
         let nav =  UINavigationController(rootViewController: vc)
 
-        let index = tamagotchi?.index
-        UserDefaults.standard.set(index, forKey: "index")
+        let index = tamagotchi?.identificationNumber
+        //Index를 Main 화면으로 끌고 가기위해
+        UserDefaults.standard.set(index, forKey: "identificationNumber")
         
-        UserDefaults.standard.set(true, forKey: "First")
+        UserDefaults.standard.set(true, forKey: "selectStartScene")
+        UserDefaults.standard.set(true, forKey: "IntroSceneSelect")
         
         sceneDelegate?.window?.rootViewController = nav
         sceneDelegate?.window?.makeKeyAndVisible()
@@ -72,7 +74,6 @@ extension PopupViewController {
         cancelButton.layer.borderWidth = 0.5
         cancelButton.setTitleColor(UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1), for: .normal)
         
-        startButton.setTitle("시작하기", for: .normal)
         startButton.layer.borderColor = UIColor.lightGray.cgColor
         startButton.layer.borderWidth = 0.5
         startButton.setTitleColor(UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1), for: .normal)

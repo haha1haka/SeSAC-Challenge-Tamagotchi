@@ -14,11 +14,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    static var nickName = "대장" {
-        didSet {
-            print("\(nickName)로 바뀌었습니다.")
-        }
-    }
+    var initialUserName: String?
     
     @IBOutlet weak var reNameTextField: UITextField!
     
@@ -41,15 +37,15 @@ class DetailViewController: UIViewController {
     }
     
     func saveData(textField: UITextField!) {
-        guard let data = textField.text else { return }
+        guard let changedUserName = textField.text else { return }
         let userdefaults = UserDefaults.standard
-        userdefaults.set(data, forKey: "nickName")
+        userdefaults.set(changedUserName, forKey: "changedUserName")
     }
     
     func loadData() {
         let userdefaults = UserDefaults.standard
-        guard let data = userdefaults.string(forKey: "nickName") else { return }
-        DetailViewController.nickName = data
+        guard let changedUserName = userdefaults.string(forKey: "changedUserName") else { return }
+        initialUserName = changedUserName
     }
 
 }

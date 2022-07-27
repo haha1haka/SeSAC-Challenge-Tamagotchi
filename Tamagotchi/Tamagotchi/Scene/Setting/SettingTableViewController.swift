@@ -9,10 +9,9 @@ import UIKit
 
 class SettingTableViewController: UITableViewController {
     
-    static var changeTitle = "변경하기"
-    
     @IBOutlet var settingCellCollection: [UITableViewCell]!
     @IBOutlet weak var rightDetailLabel: UILabel!
+    let titlename = "다마고치 변경하기"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,20 @@ class SettingTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        rightDetailLabel.text = DetailViewController.nickName
+        
+        if UserDefaults.standard.string(forKey: "changedUserName") == nil {
+            rightDetailLabel.text = "대장님"
+        } else {
+            rightDetailLabel.text = UserDefaults.standard.string(forKey: "changedUserName")
+        }
+        
+    }
+    
+    func userdefaultSaveData() {
+        
+    }
+    func userdefaultLoadData() {
+        
     }
     
 }
@@ -38,23 +50,34 @@ extension SettingTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         switch indexPath.row {
-        case 0:
+        case 0: // 이름 바꾸기
             let sb = UIStoryboard(name: "Detail", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "DetailViewController")
             as! DetailViewController
+            
+            
             self.navigationController?.pushViewController(vc, animated: true)
             
-        case 1:
+        case 1: // 다마고치 변경하기
             let sb = UIStoryboard(name: "Intro", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "IntroCollectionViewController")
             as! IntroCollectionViewController
-            vc.str = "다마고치 변경하기"
+            
+            
+            
+            IntroCollectionViewController.changedNavigationBarTitleName = "다마고치 변경하기"
+            UserDefaults.standard.set(titlename, forKey: "변경하기버튼")
+        
             self.navigationController?.pushViewController(vc, animated: true)
             
-        case 2:
+            
+            
+            
+            
+            
+        case 2: // 초기화
             let alert = UIAlertController(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가요?", preferredStyle: .alert)
-            let confirmButton = UIAlertAction(title: "응~", style: .default) {
-                [weak self] action in
+            let confirmButton = UIAlertAction(title: "응~", style: .default) { [weak self] action in
                 guard let self = self else { return }
                 
                 for key in UserDefaults.standard.dictionaryRepresentation().keys {
@@ -62,21 +85,15 @@ extension SettingTableViewController {
                 }
                 
                 let sb = UIStoryboard(name: "Intro", bundle: nil)
-
                 let vc = sb.instantiateViewController(withIdentifier: "IntroCollectionViewController")
                 as! IntroCollectionViewController
-                
-                
                 let nav = UINavigationController(rootViewController: vc)
-
-                
                 nav.modalTransitionStyle = .crossDissolve
                 nav.modalPresentationStyle = .fullScreen
-                vc.title = SettingTableViewController.changeTitle
                 
                 
                 self.present(nav, animated: true)
-                
+    
             }
             
             let cancelButton = UIAlertAction(title: "취소", style: .cancel)

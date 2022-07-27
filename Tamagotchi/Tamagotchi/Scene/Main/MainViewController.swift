@@ -9,78 +9,103 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var tamagotchiInfo = TamagotchiInfo()
+    var tamagotchiCollection = TamagotchiCollection()
+    var tamagotchi: Tamagotchi?
+    var changedUserName: String = "대장"
+    var changedName = UserDefaults.standard.string(forKey: "changedUserName") == nil ? "대장" : UserDefaults.standard.string(forKey: "changedUserName")
     
-    var dummyLabels: [String] = ["\(DetailViewController.nickName)님 오늘 과제 하셨어용?",
-                                 "\(DetailViewController.nickName)님 오늘 깃허브 푸쉬 하셨어영?",
-                                 "\(DetailViewController.nickName)님 오늘 과제 하셨어용?",
-                                 "\(DetailViewController.nickName)님 오늘 잘 노셨나요^^"]
+    var currentName: String?
+    
+    
+    var dummyLabels: [String] = []
+    
     
     @IBOutlet weak var bubbleImageView: UIImageView!
     @IBOutlet weak var dummyLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var statusPresentLabel: UILabel!
     @IBOutlet weak var inputRiceTextField: UITextField!
     @IBOutlet weak var inputWaterTextField: UITextField!
     @IBOutlet weak var riceButton: UIButton!
     @IBOutlet weak var waterButton: UIButton!
     
-    var index = UserDefaults.standard.integer(forKey: "index") // 1,2,3
+    @IBOutlet weak var statusPresentLabel: UILabel! {
+        didSet {
+            statusPresentLabel.text = "LV\(levelCounter)  밥알 \(riceCounter)개 • 물방울 \(waterCounter)개"
+        }
+    }
+    
+    var levelCounter: Int = 1 {
+        didSet {
+            imageView.image = UIImage(named: "\(tamagotchi!.identificationNumber+1)-\(levelCounter)")
+        }
+    }
+    
+    var identificationNumber: Int?  // 0,1,2
     var riceCounter: Int = 0
     var waterCounter: Int = 0
     var levelCalculator: Int = 0
     
-    var levelCounter: Int = 1 {
-        didSet {
-            imageView.image = UIImage(named: "\(String(describing: tamagotchiInfo.tamagotchi[index-1].index))-\(levelCounter)")
-        }
-    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        index = UserDefaults.standard.integer(forKey: "index")
+        identificationNumber = UserDefaults.standard.integer(forKey: "identificationNumber")
+        tamagotchi = tamagotchiCollection.tamagotchi[identificationNumber!]
+        userdefaultLoadData()
+        imageView.image = UIImage(named:"\(tamagotchi!.identificationNumber+1)-\(levelCounter)")
+        nameLabel.text = tamagotchi?.name
+        statusPresentLabel.text = "LV\(levelCounter)  밥알 \(riceCounter)개 • 물방울 \(waterCounter)개"
+        
+        
         configureInitialUI()
-        imageView.image = UIImage(named:"\(String(describing: tamagotchiInfo.tamagotchi[index].index))-\(levelCounter)")
+        
+        
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
-        title = "\(DetailViewController.nickName)님의 다마고치"
-        loadData()
-        imageView.image = UIImage(named: "\(String(describing: tamagotchiInfo.tamagotchi[index-1].index))-\(levelCounter)")
-        statusPresentLabel.text = "LV\(levelCounter)  밥알 \(riceCounter)개 • 물방울 \(waterCounter)개"
+
+        userdefaultLoadData()
+        if UserDefaults.standard.string(forKey: "changedUserName") == nil {
+            title = "대장님의 다마고치"
+            currentName = "대장"
+            dummyLabel.text = currentName! + "님 잘 쉬셨나요?"
+        } else {
+            title = "\(UserDefaults.standard.string(forKey: "changedUserName")!) 님의 다마고치"
+            currentName = "\(UserDefaults.standard.string(forKey: "changedUserName")!)"
+            dummyLabel.text = (currentName ?? "대장") + "님 잘 쉬셨나요?"
+        
+        }
+        dummyLabels = ["\(currentName ?? "대장") 님 오늘 잘 잘 자셨나요?",
+                     "\(currentName ?? "대장") 님 오늘 깃허브 푸쉬 하셨어영?",
+                     "\(currentName ?? "대장") 님 오늘 과제 하셨어용?",
+                    "\(currentName ?? "대장") 님 잘 쉬셨나요?"]
+
+
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        index = UserDefaults.standard.integer(forKey: "index")
-    }
-    
-    func saveData() {
+    func userdefaultSaveData() {
         let userdefaults = UserDefaults.standard
-        userdefaults.set(levelCounter, forKey: "levelCounter")
         userdefaults.set(riceCounter, forKey: "riceCounter")
         userdefaults.set(waterCounter, forKey: "waterCounter")
-        userdefaults.set("\(tamagotchiInfo.tamagotchi[index-1].index)-\(levelCounter)",forKey: "image")
     }
     
-    func loadData() {
+    func userdefaultLoadData() {
         let userdefaults = UserDefaults.standard
-        let data1 = userdefaults.integer(forKey: "levelCounter")
-        let data2 = userdefaults.integer(forKey: "riceCounter")
-        let data3 = userdefaults.integer(forKey: "waterCounter")
-        guard let data4 = userdefaults.string(forKey: "image") else { return }
+        let riceData = userdefaults.integer(forKey: "riceCounter")
+        let waterData = userdefaults.integer(forKey: "waterCounter")
         
-        levelCounter = data1
-        riceCounter = data2
-        waterCounter = data3
-        imageView.image  = UIImage(named: data4)
+        riceCounter = riceData
+        waterCounter = waterData
+        levelCounter = calculator()
     }
     
     func updateStatusPresentLabel() {
-        levelCounter = calculator()
-        saveData()
+        userdefaultSaveData()
         statusPresentLabel.text = "LV\(levelCounter)  밥알 \(riceCounter)개 • 물방울 \(waterCounter)개"
+        levelCounter = calculator()
     }
     
     @IBAction func tappedRiceButton(_ sender: UIButton) {
@@ -163,7 +188,7 @@ extension MainViewController {
         dummyLabel.text = dummyLabels.randomElement()
         dummyLabel.textAlignment = .center
         
-        nameLabel.text = tamagotchiInfo.tamagotchi[index-1].name
+        
         nameLabel.textColor = UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1)
         nameLabel.font = UIFont.systemFont(ofSize: 13,weight: .semibold)
         nameLabel.textAlignment = .center
@@ -201,7 +226,8 @@ extension MainViewController {
     
     @objc func tappedSettingButton() {
         let sb = UIStoryboard(name: "Setting", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SettingTableViewController") as! SettingTableViewController
+        let vc = sb.instantiateViewController(withIdentifier: "SettingTableViewController")
+        as! SettingTableViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

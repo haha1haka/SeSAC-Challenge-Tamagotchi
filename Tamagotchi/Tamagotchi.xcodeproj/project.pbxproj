@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F4360A05288CFCFE00B2095D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */; };
-		F4360A07288D229E00B2095D /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4360A06288D229E00B2095D /* SettingTableViewCell.swift */; };
 		F494AB87288CE12100B66FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494AB86288CE12100B66FBA /* AppDelegate.swift */; };
 		F494AB89288CE12100B66FBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494AB88288CE12100B66FBA /* SceneDelegate.swift */; };
 		F494AB90288CE12200B66FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F494AB8F288CE12200B66FBA /* Assets.xcassets */; };
@@ -23,13 +22,12 @@
 		F494ABAD288CE26800B66FBA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABAC288CE26800B66FBA /* Setting.storyboard */; };
 		F494ABAF288CE27100B66FBA /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABAE288CE27100B66FBA /* Detail.storyboard */; };
 		F494ABB1288CE29200B66FBA /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB0288CE29200B66FBA /* Tamagotchi.swift */; };
-		F494ABB3288CE2A200B66FBA /* TamagotchiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB2288CE2A200B66FBA /* TamagotchiInfo.swift */; };
+		F494ABB3288CE2A200B66FBA /* TamagotchiCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB2288CE2A200B66FBA /* TamagotchiCollection.swift */; };
 		F494ABBD288CE43000B66FBA /* IntroCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
-		F4360A06288D229E00B2095D /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		F494AB83288CE12100B66FBA /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F494AB86288CE12100B66FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F494AB88288CE12100B66FBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +44,7 @@
 		F494ABAC288CE26800B66FBA /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		F494ABAE288CE27100B66FBA /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		F494ABB0288CE29200B66FBA /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
-		F494ABB2288CE2A200B66FBA /* TamagotchiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiInfo.swift; sourceTree = "<group>"; };
+		F494ABB2288CE2A200B66FBA /* TamagotchiCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiCollection.swift; sourceTree = "<group>"; };
 		F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +121,6 @@
 			children = (
 				F494ABAC288CE26800B66FBA /* Setting.storyboard */,
 				F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */,
-				F4360A06288D229E00B2095D /* SettingTableViewCell.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -141,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F494ABB0288CE29200B66FBA /* Tamagotchi.swift */,
-				F494ABB2288CE2A200B66FBA /* TamagotchiInfo.swift */,
+				F494ABB2288CE2A200B66FBA /* TamagotchiCollection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,13 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4360A07288D229E00B2095D /* SettingTableViewCell.swift in Sources */,
 				F494ABB1288CE29200B66FBA /* Tamagotchi.swift in Sources */,
 				F494AB87288CE12100B66FBA /* AppDelegate.swift in Sources */,
 				F494AB89288CE12100B66FBA /* SceneDelegate.swift in Sources */,
 				F494ABBD288CE43000B66FBA /* IntroCollectionViewController.swift in Sources */,
 				F4360A05288CFCFE00B2095D /* SettingTableViewController.swift in Sources */,
-				F494ABB3288CE2A200B66FBA /* TamagotchiInfo.swift in Sources */,
+				F494ABB3288CE2A200B66FBA /* TamagotchiCollection.swift in Sources */,
 				F494ABA5288CE23A00B66FBA /* IntroCollectionViewCell.swift in Sources */,
 				F494AB9D288CE1EE00B66FBA /* PopupViewController.swift in Sources */,
 				F494AB9F288CE20200B66FBA /* MainViewController.swift in Sources */,
@@ -394,6 +390,7 @@
 				DEVELOPMENT_TEAM = M526U856M5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "김학성";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Intro;
@@ -423,6 +420,7 @@
 				DEVELOPMENT_TEAM = M526U856M5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "김학성";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Intro;

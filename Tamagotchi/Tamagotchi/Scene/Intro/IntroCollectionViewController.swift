@@ -11,23 +11,29 @@ import UIKit
 
 class IntroCollectionViewController: UICollectionViewController {
     
-    var tamagotchiInfo = TamagotchiInfo()
+    var tamagotchCollection = TamagotchiCollection()
     
-    var str: String = "다마고치 선택하기" {
-        didSet {
-            title = str
-        }
-    }
+    static var changedNavigationBarTitleName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureInitialUI()
         configureCollectionViewCellLayout()
+        title = "다마고치 선택하기"
     }
-    override func viewDidAppear(_ animated: Bool) {
-        title = str
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if UserDefaults.standard.string(forKey: "changedUserName") != nil {
+            title = "다마고치 변경하기"
+        }
     }
-
+    
+    func distinguishIntroScene() {
+        if UserDefaults.standard.bool(forKey: "distinguishIntroScene") {
+            
+        }
+    }
+    
     func configureInitialUI() {
         collectionView.backgroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
     }
@@ -48,26 +54,44 @@ class IntroCollectionViewController: UICollectionViewController {
 extension IntroCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        tamagotchiInfo.tamagotchi.count
+        return 20
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IntroCollectionViewCell",
                                                       for: indexPath) as! IntroCollectionViewCell
-        cell.configureCellUI(data: tamagotchiInfo.tamagotchi[indexPath.row])
+        
+
+        
+        indexPath.row < 3 ? cell.configureCellUI(data: tamagotchCollection.tamagotchi[indexPath.row])
+                          : cell.configureCellUI(data: tamagotchCollection.tamagotchi.last!)
+        
+        
         return cell
+        
     }
     
     // MARK: 화면이동 (intro -> popup)
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Popup", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
+        let vc = sb.instantiateViewController(withIdentifier: "PopupViewController")
+        as! PopupViewController
         vc.modalPresentationStyle = .overFullScreen
         vc.view.backgroundColor = .tertiarySystemFill
-        vc.imageView.image = UIImage(named: "\( tamagotchiInfo.tamagotchi[indexPath.row].image)")
-        vc.nameLabel.text = tamagotchiInfo.tamagotchi[indexPath.row].name
-        vc.descriptionLabel.text = tamagotchiInfo.tamagotchi[indexPath.row].description
-        vc.tamagotchi = tamagotchiInfo.tamagotchi[indexPath.row]
+        
+        if indexPath.row < 3 {
+            vc.imageView.image = UIImage(named: "\( tamagotchCollection.tamagotchi[indexPath.row].image)")
+            vc.nameLabel.text = tamagotchCollection.tamagotchi[indexPath.row].name
+            vc.descriptionLabel.text = tamagotchCollection.tamagotchi[indexPath.row].description
+            vc.tamagotchi = tamagotchCollection.tamagotchi[indexPath.row]
+            
+            //Detail화면 에서 초기화하기 버튼을 눌렀을시 Userdefault에 값을 넣어 줬습니다
+            if UserDefaults.standard.string(forKey: "변경하기버튼") == nil {
+                vc.startButton.setTitle("시작하기", for: .normal)
+            } else {
+                vc.startButton.setTitle("변경하기", for: .normal)
+            }
+        }
         
         self.present(vc, animated: true, completion: nil)
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Tamagotchi {
-    var index: Int
+    var identificationNumber: Int
     var name: String
     var initImage: String
     var image: String
