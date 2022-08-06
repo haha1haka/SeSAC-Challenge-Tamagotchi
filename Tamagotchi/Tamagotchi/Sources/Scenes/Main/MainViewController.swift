@@ -226,8 +226,8 @@ extension MainViewController {
     
     @objc func tappedSettingButton() {
         let sb = UIStoryboard(name: "Setting", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SettingTableViewController")
-        as! SettingTableViewController
+        guard let vc = sb.instantiateViewController(withIdentifier: SettingTableViewController.reuseIdenrifier)
+                as? SettingTableViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

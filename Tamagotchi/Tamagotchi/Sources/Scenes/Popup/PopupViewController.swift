@@ -29,8 +29,8 @@ class PopupViewController: UIViewController {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate =  windowScene?.delegate as? SceneDelegate
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "MainViewController")
-        as! MainViewController
+        guard let vc = sb.instantiateViewController(withIdentifier: MainViewController.reuseIdenrifier)
+                as? MainViewController else { return }
         let nav =  UINavigationController(rootViewController: vc)
 
         let index = tamagotchi?.identificationNumber

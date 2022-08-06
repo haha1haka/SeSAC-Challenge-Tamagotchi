@@ -52,7 +52,7 @@ extension SettingTableViewController {
         switch indexPath.row {
         case 0: // 이름 바꾸기
             let sb = UIStoryboard(name: "Detail", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "DetailViewController")
+            let vc = sb.instantiateViewController(withIdentifier: DetailViewController.reuseIdenrifier)
             as! DetailViewController
             
             
@@ -60,7 +60,7 @@ extension SettingTableViewController {
             
         case 1: // 다마고치 변경하기
             let sb = UIStoryboard(name: "Intro", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "IntroCollectionViewController")
+            let vc = sb.instantiateViewController(withIdentifier: IntroCollectionViewController.reuseIdenrifier)
             as! IntroCollectionViewController
             
             
@@ -85,8 +85,8 @@ extension SettingTableViewController {
                 }
                 
                 let sb = UIStoryboard(name: "Intro", bundle: nil)
-                let vc = sb.instantiateViewController(withIdentifier: "IntroCollectionViewController")
-                as! IntroCollectionViewController
+                guard let vc = sb.instantiateViewController(withIdentifier: IntroCollectionViewController.reuseIdenrifier)
+                        as? IntroCollectionViewController else { return }
                 let nav = UINavigationController(rootViewController: vc)
                 nav.modalTransitionStyle = .crossDissolve
                 nav.modalPresentationStyle = .fullScreen

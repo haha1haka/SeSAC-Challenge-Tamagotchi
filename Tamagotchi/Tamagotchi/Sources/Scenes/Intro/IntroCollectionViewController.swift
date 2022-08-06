@@ -58,11 +58,10 @@ extension IntroCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IntroCollectionViewCell",
-                                                      for: indexPath) as! IntroCollectionViewCell
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IntroCollectionViewCell.reuseIdenrifier, for: indexPath) as? IntroCollectionViewCell else { return UICollectionViewCell() }
         
 
-        
         indexPath.row < 3 ? cell.configureCellUI(data: tamagotchCollection.tamagotchi[indexPath.row])
                           : cell.configureCellUI(data: tamagotchCollection.tamagotchi.last!)
         

@@ -24,6 +24,10 @@
 		F494ABB1288CE29200B66FBA /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB0288CE29200B66FBA /* Tamagotchi.swift */; };
 		F494ABB3288CE2A200B66FBA /* TamagotchiCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB2288CE2A200B66FBA /* TamagotchiCollection.swift */; };
 		F494ABBD288CE43000B66FBA /* IntroCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */; };
+		F4B3640C289E177300C50D7E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3640B289E177300C50D7E /* UIViewController.swift */; };
+		F4B3640E289E189800C50D7E /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3640D289E189800C50D7E /* ReuseIdentifier.swift */; };
+		F4B36410289E1AFC00C50D7E /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3640F289E1AFC00C50D7E /* UICollectionViewCell.swift */; };
+		F4B36412289E1B0600C50D7E /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B36411289E1B0600C50D7E /* UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		F494ABB0288CE29200B66FBA /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 		F494ABB2288CE2A200B66FBA /* TamagotchiCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiCollection.swift; sourceTree = "<group>"; };
 		F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewController.swift; sourceTree = "<group>"; };
+		F4B3640B289E177300C50D7E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F4B3640D289E189800C50D7E /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
+		F4B3640F289E1AFC00C50D7E /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		F4B36411289E1B0600C50D7E /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +86,10 @@
 		F494AB85288CE12100B66FBA /* Tamagotchi */ = {
 			isa = PBXGroup;
 			children = (
-				F494ABBA288CE34500B66FBA /* Application */,
+				F4B3640A289E0FAD00C50D7E /* Sources */,
+				F4B36407289E0FA300C50D7E /* Protocols */,
+				F4B36408289E0FA500C50D7E /* Extentions */,
 				F494ABB9288CE2F500B66FBA /* Model */,
-				F494ABBB288CE38E00B66FBA /* Scene */,
 				F494AB8F288CE12200B66FBA /* Assets.xcassets */,
 				F494AB91288CE12200B66FBA /* LaunchScreen.storyboard */,
 				F494AB94288CE12200B66FBA /* Info.plist */,
@@ -152,7 +161,7 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		F494ABBB288CE38E00B66FBA /* Scene */ = {
+		F494ABBB288CE38E00B66FBA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				F494ABB4288CE2D500B66FBA /* Intro */,
@@ -161,7 +170,42 @@
 				F494ABB7288CE2E900B66FBA /* Setting */,
 				F494ABB8288CE2EE00B66FBA /* Detail */,
 			);
-			path = Scene;
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F4B36407289E0FA300C50D7E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F4B3640D289E189800C50D7E /* ReuseIdentifier.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F4B36408289E0FA500C50D7E /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				F4B3640B289E177300C50D7E /* UIViewController.swift */,
+				F4B3640F289E1AFC00C50D7E /* UICollectionViewCell.swift */,
+				F4B36411289E1B0600C50D7E /* UITableViewCell.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		F4B36409289E0FA900C50D7E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		F4B3640A289E0FAD00C50D7E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F494ABBA288CE34500B66FBA /* Application */,
+				F494ABBB288CE38E00B66FBA /* Scenes */,
+				F4B36409289E0FA900C50D7E /* Commons */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,9 +286,13 @@
 				F494ABB1288CE29200B66FBA /* Tamagotchi.swift in Sources */,
 				F494AB87288CE12100B66FBA /* AppDelegate.swift in Sources */,
 				F494AB89288CE12100B66FBA /* SceneDelegate.swift in Sources */,
+				F4B3640C289E177300C50D7E /* UIViewController.swift in Sources */,
 				F494ABBD288CE43000B66FBA /* IntroCollectionViewController.swift in Sources */,
+				F4B36412289E1B0600C50D7E /* UITableViewCell.swift in Sources */,
 				F4360A05288CFCFE00B2095D /* SettingTableViewController.swift in Sources */,
+				F4B36410289E1AFC00C50D7E /* UICollectionViewCell.swift in Sources */,
 				F494ABB3288CE2A200B66FBA /* TamagotchiCollection.swift in Sources */,
+				F4B3640E289E189800C50D7E /* ReuseIdentifier.swift in Sources */,
 				F494ABA5288CE23A00B66FBA /* IntroCollectionViewCell.swift in Sources */,
 				F494AB9D288CE1EE00B66FBA /* PopupViewController.swift in Sources */,
 				F494AB9F288CE20200B66FBA /* MainViewController.swift in Sources */,

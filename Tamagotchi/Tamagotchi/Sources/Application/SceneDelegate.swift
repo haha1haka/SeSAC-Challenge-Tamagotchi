@@ -20,7 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "MainViewController")
             as! MainViewController
-            let nav =  UINavigationController(rootViewController: vc)
             self.window?.rootViewController =  UINavigationController(rootViewController: vc)
 
         } else {
@@ -30,9 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let sb = UIStoryboard(name: "Intro", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier:"IntroCollectionViewController")
             as! IntroCollectionViewController
-            let nav =  UINavigationController(rootViewController: vc)
             
-            self.window?.rootViewController = nav
+            self.window?.rootViewController = UINavigationController(rootViewController: vc)
 
         }
 
