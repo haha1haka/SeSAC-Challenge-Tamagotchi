@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingTableViewController: UITableViewController {
+class SettingViewController: UITableViewController {
     
     @IBOutlet var settingCellCollection: [UITableViewCell]!
     @IBOutlet weak var rightDetailLabel: UILabel!
@@ -45,30 +45,25 @@ class SettingTableViewController: UITableViewController {
     
 }
 
-extension SettingTableViewController {
+extension SettingViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         switch indexPath.row {
         case 0: // 이름 바꾸기
-            let sb = UIStoryboard(name: "Detail", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: DetailViewController.reuseIdenrifier)
-            as! DetailViewController
+            let sb = UIStoryboard(StoryboardName.detail)
+            guard let detailViewController = sb.instantiateViewController(withIdentifier: DetailViewController.className) as? DetailViewController else { return }
             
-            
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(detailViewController, animated: true)
             
         case 1: // 다마고치 변경하기
-            let sb = UIStoryboard(name: "Intro", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: IntroCollectionViewController.reuseIdenrifier)
-            as! IntroCollectionViewController
             
-            
-            
-            IntroCollectionViewController.changedNavigationBarTitleName = "다마고치 변경하기"
+            let sb = UIStoryboard(StoryboardName.intro)
+            guard let introViewController = sb.instantiateViewController(withIdentifier: IntroViewController.className) as? IntroViewController else { return }
+
             UserDefaults.standard.set(titlename, forKey: "변경하기버튼")
         
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(introViewController, animated: true)
             
             
             
@@ -84,10 +79,12 @@ extension SettingTableViewController {
                             UserDefaults.standard.removeObject(forKey: key.description)
                 }
                 
-                let sb = UIStoryboard(name: "Intro", bundle: nil)
-                guard let vc = sb.instantiateViewController(withIdentifier: IntroCollectionViewController.reuseIdenrifier)
-                        as? IntroCollectionViewController else { return }
-                let nav = UINavigationController(rootViewController: vc)
+                let sb = UIStoryboard(StoryboardName.intro)
+                guard let introViewController = sb.instantiateViewController(withIdentifier: IntroViewController.className) as? IntroViewController else { return }
+
+                
+                
+                let nav = UINavigationController(rootViewController: introViewController)
                 nav.modalTransitionStyle = .crossDissolve
                 nav.modalPresentationStyle = .fullScreen
                 

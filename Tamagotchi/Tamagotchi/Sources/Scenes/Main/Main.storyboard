@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" secondItem="ylo-we-d0O" secondAttribute="height" id="qAp-Na-R5j"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="81N-XG-cNM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="81N-XG-cNM">
                                 <rect key="frame" x="97" y="64" width="220" height="209"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXT-le-mc3">
@@ -111,7 +111,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="jiG-Mi-69E"/>
                     <connections>
-                        <outlet property="bubbleImageView" destination="81N-XG-cNM" id="OyZ-Jj-MFj"/>
                         <outlet property="dummyLabel" destination="1eG-KC-gZK" id="uWu-q7-Jjd"/>
                         <outlet property="imageView" destination="ylo-we-d0O" id="po3-uJ-rFm"/>
                         <outlet property="inputRiceTextField" destination="UQW-i3-Pxk" id="s4g-NA-0pV"/>
@@ -128,6 +127,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bubble" width="222" height="142"/>
         <image name="drop.circle" catalog="system" width="128" height="121"/>
         <image name="leaf.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

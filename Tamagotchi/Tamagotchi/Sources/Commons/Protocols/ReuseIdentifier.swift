@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ReuseIdenrifier {
-    static var reuseIdenrifier: String { get }
-}
+//protocol ReuseIdenrifier {
+//    static var reuseIdenrifier: String { get }
+//}

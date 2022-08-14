@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4360A05288CFCFE00B2095D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */; };
+		F433A49E289E8A0300FBE74E /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433A49D289E8A0300FBE74E /* UILabel.swift */; };
+		F433A4A0289E8C9000FBE74E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433A49F289E8C9000FBE74E /* UIButton.swift */; };
+		F433A4A2289E9AA800FBE74E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433A4A1289E9AA800FBE74E /* UITextField.swift */; };
+		F4360A05288CFCFE00B2095D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4360A04288CFCFE00B2095D /* SettingViewController.swift */; };
 		F494AB87288CE12100B66FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494AB86288CE12100B66FBA /* AppDelegate.swift */; };
 		F494AB89288CE12100B66FBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494AB88288CE12100B66FBA /* SceneDelegate.swift */; };
 		F494AB90288CE12200B66FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F494AB8F288CE12200B66FBA /* Assets.xcassets */; };
@@ -22,16 +25,22 @@
 		F494ABAD288CE26800B66FBA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABAC288CE26800B66FBA /* Setting.storyboard */; };
 		F494ABAF288CE27100B66FBA /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F494ABAE288CE27100B66FBA /* Detail.storyboard */; };
 		F494ABB1288CE29200B66FBA /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB0288CE29200B66FBA /* Tamagotchi.swift */; };
-		F494ABB3288CE2A200B66FBA /* TamagotchiCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABB2288CE2A200B66FBA /* TamagotchiCollection.swift */; };
-		F494ABBD288CE43000B66FBA /* IntroCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */; };
-		F4B3640C289E177300C50D7E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3640B289E177300C50D7E /* UIViewController.swift */; };
+		F494ABBD288CE43000B66FBA /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494ABBC288CE43000B66FBA /* IntroViewController.swift */; };
+		F4A8CD8028A787EE00CD8C7B /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8CD7F28A787EE00CD8C7B /* Storyboard.swift */; };
+		F4A8CD8228A7F2B200CD8C7B /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8CD8128A7F2B200CD8C7B /* UICollectionView.swift */; };
+		F4A8CD8428A7F2B900CD8C7B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8CD8328A7F2B900CD8C7B /* UITableView.swift */; };
+		F4A8CD8828A7F36200CD8C7B /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8CD8728A7F36200CD8C7B /* NSObject.swift */; };
+		F4A8CD8A28A7F72200CD8C7B /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8CD8928A7F72200CD8C7B /* UIStoryboard.swift */; };
 		F4B3640E289E189800C50D7E /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3640D289E189800C50D7E /* ReuseIdentifier.swift */; };
-		F4B36410289E1AFC00C50D7E /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3640F289E1AFC00C50D7E /* UICollectionViewCell.swift */; };
-		F4B36412289E1B0600C50D7E /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B36411289E1B0600C50D7E /* UITableViewCell.swift */; };
+		F4B36419289E28C000C50D7E /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B36418289E28C000C50D7E /* MyColor.swift */; };
+		F4B3641C289E2D1700C50D7E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3641B289E2D1700C50D7E /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		F433A49D289E8A0300FBE74E /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		F433A49F289E8C9000FBE74E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		F433A4A1289E9AA800FBE74E /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		F4360A04288CFCFE00B2095D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		F494AB83288CE12100B66FBA /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F494AB86288CE12100B66FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F494AB88288CE12100B66FBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,12 +57,15 @@
 		F494ABAC288CE26800B66FBA /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		F494ABAE288CE27100B66FBA /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		F494ABB0288CE29200B66FBA /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
-		F494ABB2288CE2A200B66FBA /* TamagotchiCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiCollection.swift; sourceTree = "<group>"; };
-		F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCollectionViewController.swift; sourceTree = "<group>"; };
-		F4B3640B289E177300C50D7E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F494ABBC288CE43000B66FBA /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		F4A8CD7F28A787EE00CD8C7B /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		F4A8CD8128A7F2B200CD8C7B /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		F4A8CD8328A7F2B900CD8C7B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		F4A8CD8728A7F36200CD8C7B /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		F4A8CD8928A7F72200CD8C7B /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		F4B3640D289E189800C50D7E /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
-		F4B3640F289E1AFC00C50D7E /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
-		F4B36411289E1B0600C50D7E /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		F4B36418289E28C000C50D7E /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
+		F4B3641B289E2D1700C50D7E /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				F4B3640A289E0FAD00C50D7E /* Sources */,
-				F4B36407289E0FA300C50D7E /* Protocols */,
-				F4B36408289E0FA500C50D7E /* Extentions */,
-				F494ABB9288CE2F500B66FBA /* Model */,
-				F494AB8F288CE12200B66FBA /* Assets.xcassets */,
-				F494AB91288CE12200B66FBA /* LaunchScreen.storyboard */,
-				F494AB94288CE12200B66FBA /* Info.plist */,
+				F4B36413289E20A700C50D7E /* Resources */,
+				F4B36414289E20C000C50D7E /* Supportings */,
 			);
 			path = Tamagotchi;
 			sourceTree = "<group>";
@@ -101,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				F494ABA6288CE24B00B66FBA /* Intro.storyboard */,
-				F494ABBC288CE43000B66FBA /* IntroCollectionViewController.swift */,
+				F494ABBC288CE43000B66FBA /* IntroViewController.swift */,
 				F494ABA4288CE23A00B66FBA /* IntroCollectionViewCell.swift */,
 			);
 			path = Intro;
@@ -129,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F494ABAC288CE26800B66FBA /* Setting.storyboard */,
-				F4360A04288CFCFE00B2095D /* SettingTableViewController.swift */,
+				F4360A04288CFCFE00B2095D /* SettingViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -147,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				F494ABB0288CE29200B66FBA /* Tamagotchi.swift */,
-				F494ABB2288CE2A200B66FBA /* TamagotchiCollection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +180,35 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		F4A8CD7E28A787C800CD8C7B /* SetOfnamedValues */ = {
+			isa = PBXGroup;
+			children = (
+				F4A8CD7F28A787EE00CD8C7B /* Storyboard.swift */,
+			);
+			path = SetOfnamedValues;
+			sourceTree = "<group>";
+		};
+		F4A8CD8528A7F33200CD8C7B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F4A8CD8728A7F36200CD8C7B /* NSObject.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F4A8CD8628A7F34600CD8C7B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F4A8CD8128A7F2B200CD8C7B /* UICollectionView.swift */,
+				F4A8CD8328A7F2B900CD8C7B /* UITableView.swift */,
+				F433A49D289E8A0300FBE74E /* UILabel.swift */,
+				F433A49F289E8C9000FBE74E /* UIButton.swift */,
+				F433A4A1289E9AA800FBE74E /* UITextField.swift */,
+				F4A8CD8928A7F72200CD8C7B /* UIStoryboard.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		F4B36407289E0FA300C50D7E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,9 +220,8 @@
 		F4B36408289E0FA500C50D7E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				F4B3640B289E177300C50D7E /* UIViewController.swift */,
-				F4B3640F289E1AFC00C50D7E /* UICollectionViewCell.swift */,
-				F4B36411289E1B0600C50D7E /* UITableViewCell.swift */,
+				F4A8CD8528A7F33200CD8C7B /* Foundation */,
+				F4A8CD8628A7F34600CD8C7B /* UIKit */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -194,6 +229,11 @@
 		F4B36409289E0FA900C50D7E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				F4A8CD7E28A787C800CD8C7B /* SetOfnamedValues */,
+				F4B3641A289E2C9800C50D7E /* UserDefaults */,
+				F4B36417289E28B900C50D7E /* MyColor */,
+				F4B36407289E0FA300C50D7E /* Protocols */,
+				F4B36408289E0FA500C50D7E /* Extentions */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -202,10 +242,44 @@
 			isa = PBXGroup;
 			children = (
 				F494ABBA288CE34500B66FBA /* Application */,
+				F494ABB9288CE2F500B66FBA /* Model */,
 				F494ABBB288CE38E00B66FBA /* Scenes */,
 				F4B36409289E0FA900C50D7E /* Commons */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		F4B36413289E20A700C50D7E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F494AB8F288CE12200B66FBA /* Assets.xcassets */,
+				F494AB91288CE12200B66FBA /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F4B36414289E20C000C50D7E /* Supportings */ = {
+			isa = PBXGroup;
+			children = (
+				F494AB94288CE12200B66FBA /* Info.plist */,
+			);
+			path = Supportings;
+			sourceTree = "<group>";
+		};
+		F4B36417289E28B900C50D7E /* MyColor */ = {
+			isa = PBXGroup;
+			children = (
+				F4B36418289E28C000C50D7E /* MyColor.swift */,
+			);
+			path = MyColor;
+			sourceTree = "<group>";
+		};
+		F4B3641A289E2C9800C50D7E /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				F4B3641B289E2D1700C50D7E /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,20 +357,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F433A4A0289E8C9000FBE74E /* UIButton.swift in Sources */,
+				F4A8CD8828A7F36200CD8C7B /* NSObject.swift in Sources */,
 				F494ABB1288CE29200B66FBA /* Tamagotchi.swift in Sources */,
 				F494AB87288CE12100B66FBA /* AppDelegate.swift in Sources */,
 				F494AB89288CE12100B66FBA /* SceneDelegate.swift in Sources */,
-				F4B3640C289E177300C50D7E /* UIViewController.swift in Sources */,
-				F494ABBD288CE43000B66FBA /* IntroCollectionViewController.swift in Sources */,
-				F4B36412289E1B0600C50D7E /* UITableViewCell.swift in Sources */,
-				F4360A05288CFCFE00B2095D /* SettingTableViewController.swift in Sources */,
-				F4B36410289E1AFC00C50D7E /* UICollectionViewCell.swift in Sources */,
-				F494ABB3288CE2A200B66FBA /* TamagotchiCollection.swift in Sources */,
+				F494ABBD288CE43000B66FBA /* IntroViewController.swift in Sources */,
+				F433A49E289E8A0300FBE74E /* UILabel.swift in Sources */,
+				F4360A05288CFCFE00B2095D /* SettingViewController.swift in Sources */,
+				F4B36419289E28C000C50D7E /* MyColor.swift in Sources */,
+				F4A8CD8228A7F2B200CD8C7B /* UICollectionView.swift in Sources */,
+				F4A8CD8028A787EE00CD8C7B /* Storyboard.swift in Sources */,
+				F433A4A2289E9AA800FBE74E /* UITextField.swift in Sources */,
+				F4B3641C289E2D1700C50D7E /* UserDefaults.swift in Sources */,
 				F4B3640E289E189800C50D7E /* ReuseIdentifier.swift in Sources */,
 				F494ABA5288CE23A00B66FBA /* IntroCollectionViewCell.swift in Sources */,
 				F494AB9D288CE1EE00B66FBA /* PopupViewController.swift in Sources */,
+				F4A8CD8A28A7F72200CD8C7B /* UIStoryboard.swift in Sources */,
 				F494AB9F288CE20200B66FBA /* MainViewController.swift in Sources */,
 				F494ABA3288CE21500B66FBA /* DetailViewController.swift in Sources */,
+				F4A8CD8428A7F2B900CD8C7B /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +517,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M526U856M5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_FILE = Tamagotchi/Supportings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "김학성";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -467,7 +547,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M526U856M5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_FILE = Tamagotchi/Supportings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "김학성";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
