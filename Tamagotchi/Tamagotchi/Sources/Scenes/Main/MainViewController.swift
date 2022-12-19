@@ -18,11 +18,33 @@ class MainViewController: UIViewController {
     @IBOutlet weak var waterButton: UIButton!
     @IBOutlet weak var statusPresentLabel: UILabel!
 
-    var tamagotchi = TamagotchiInfo.tamagotchis[UserDefaultsManager.standard.identificationNumber]
+    var tamagotchiObject: TamagotchiObjet?
+    
+    var rice = 0
+    var water = 0
+    
+    var level: Int {
+        let measures = Int((rice / 5) + (water / 2)) / 10
+        if measures <= 1{
+            return 1
+        } else if measures > 1 && measures < 10 {
+            return measures
+        } else {
+            return 10
+        }
+    }
+    var imageString: String {
+        if self.level <= 1 {
+            return tamagotchiObject?.image.first ?? ""
+        } else if level > 1 && level < 10 {
+            return tamagotchiObject?.image[level] ?? ""
+        } else {
+            return tamagotchiObject?.image.last ?? ""
+        }
+        
+    }
 
-    var rice: Int = 0
-    var water: Int = 0
-    var level: Int = 0
+    
 }
 
 
@@ -34,6 +56,11 @@ extension MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("⭐️MainViewController\(tamagotchiObject)")
+        //내 캐릭터 UserDefaults
+        UserDefaultsManager.standard.identificationNumber = tamagotchiObject?.identificationNumber ?? 0
+        
+        
         
         configureUI()
         
@@ -43,16 +70,18 @@ extension MainViewController {
     
         view.backgroundColor = MyColor.backgroundColor
         
-        guard let image = tamagotchi.image.first else { return }
-        imageView.image = UIImage(named: image)
+        guard let image = tamagotchiObject?.image.first else { return }
+        imageView.image = UIImage(named: imageString)
         
-        nameLabel.text = tamagotchi.name
+        nameLabel.text = tamagotchiObject?.name
         nameLabel.myNameLabelSet()
-        statusPresentLabel.text = "LV\(level) • 밥알 \(rice)개 • 물방울 \(water)개"
         
+        statusPresentLabel.text = "LV\(level) • 밥알 \(rice)개 • 물방울 \(water)개"
+        statusPresentLabel.myNomalLabelSet()
         
         inputRiceTextField.myTextFieldSet("밥 주세용")
         inputWaterTextField.myTextFieldSet("물 주세용")
+        
         riceButton.myEatButtonSet("밥먹기")
         waterButton.myEatButtonSet("물먹기")
         
@@ -73,11 +102,14 @@ extension MainViewController {
 
 // MARK: - viewWillAppear
 extension MainViewController {
+
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
         rice = UserDefaultsManager.standard.rice
         water = UserDefaultsManager.standard.water
-    
+        imageView.image = UIImage(named: imageString)
+        configureUI()
+
     }
 }
 
@@ -86,36 +118,43 @@ extension MainViewController {
 extension MainViewController {
     
     @IBAction func tappedRiceButton(_ sender: UIButton) {
-        
-        guard let input = inputRiceTextField.text else { return }
-        guard let inputNumber = Int(input) else { return }
-        
+
+
         if !inputRiceTextField.isEditing {
             rice += 1
+            print("🍘")
+            statusPresentLabel.text = "LV\(level) • 밥알 \(rice)개 • 물방울 \(water)개"
+            UserDefaultsManager.standard.rice = rice
+            imageView.image = UIImage(named: imageString)
         } else {
-            if inputNumber > 99 {
+            if Int(inputRiceTextField.text ?? "")! > 99 {
                 dummyLabel.text = "99개 이상은 못먹어요ㅠㅠ"
                 inputRiceTextField.resignResponder()
             } else {
-                rice += inputNumber
+                rice += Int(inputRiceTextField.text ?? "")!
                 inputRiceTextField.resignResponder()
             }
         }
+        
     }
 
     @IBAction func tappedWaterButton(_ sender: UIButton) {
-        
-        guard let input = inputWaterTextField.text else { return }
-        guard let inputNumber = Int(input) else { return }
-        
+    
         if !inputWaterTextField.isEditing {
             water += 1
+            print("🍉")
+            statusPresentLabel.text = "LV\(level) • 밥알 \(rice)개 • 물방울 \(water)개"
+            UserDefaultsManager.standard.water = water
+            imageView.image = UIImage(named: imageString)
         } else {
-            if inputNumber > 99 {
+            if Int(inputWaterTextField.text ?? "")! > 99 {
                 dummyLabel.text = "99개 이상은 못먹어요ㅠㅠ"
                 inputWaterTextField.resignResponder()
             } else {
-                water += inputNumber
+                water += Int(inputWaterTextField.text ?? "")!
+                UserDefaultsManager.standard.water = water
+                imageView.image = UIImage(named: imageString)
+                statusPresentLabel.text = "LV\(level) • 밥알 \(rice)개 • 물방울 \(water)개"
                 inputWaterTextField.resignResponder()
             }
         }
@@ -123,9 +162,7 @@ extension MainViewController {
     
     
 
-    func calculateLevel(rice: Double, water: Double)  {
-        level = Int(((rice / 5) + (water / 2)) / 10)
-    }
+
     
     
     func settingRiceAndWater() {

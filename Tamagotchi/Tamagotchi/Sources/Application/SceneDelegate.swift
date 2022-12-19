@@ -17,17 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
 
         if UserDefaults.standard.string(forKey: "identificationNumber") != nil {
-            
+
             let sb = UIStoryboard(StoryboardName.main)
-            guard let vc = sb.instantiateViewController(withIdentifier: MainViewController.className) as? MainViewController else { return }
+            guard let vc = sb.instantiateViewController(withIdentifier: MainViewController.className)
+                    as? MainViewController else { return }
             self.window?.rootViewController =  UINavigationController(rootViewController: vc)
-            
+
         } else {
-            
+
             let sb = UIStoryboard(StoryboardName.intro)
-            guard let vc = sb.instantiateViewController(withIdentifier: IntroViewController.className) as? IntroViewController else { return }
+            guard let vc = sb.instantiateViewController(withIdentifier: IntroViewController.className)
+                    as? IntroViewController else { return }
             self.window?.rootViewController =  UINavigationController(rootViewController: vc)
-            
 
         }
 

@@ -17,8 +17,10 @@ class PopupViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     
-    var tamagotchi: Tamagotchi?
+    var tamagotchiObject: TamagotchiObjet?
 }
+
+
 
 // MARK: - viewDidLoad
 extension PopupViewController {
@@ -29,14 +31,21 @@ extension PopupViewController {
     }
     
     func configureInitialUI() {
+        print("✅PopupViewController\(tamagotchiObject)")
         containerView.backgroundColor = MyColor.backgroundColor
         nameLabel.myNameLabelSet()
+        nameLabel.text = tamagotchiObject?.name
         descriptionLabel.myNomalLabelSet()
-        cancelButton.setTitle("취소", for: .normal)
-        cancelButton.mySelectionButtonSet()
-        startButton.mySelectionButtonSet()
+        descriptionLabel.text = tamagotchiObject?.description
+        guard let imageString = tamagotchiObject?.image.last! else { return }
+        imageView.image = UIImage(named: imageString)
+        cancelButton.mySelectionButtonSet("취소")
+        startButton.mySelectionButtonSet("확인")
     }
 }
+
+
+
 // MARK: - Button Action Methods
 extension PopupViewController {
     
@@ -45,19 +54,20 @@ extension PopupViewController {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate =  windowScene?.delegate as? SceneDelegate
         let sb = UIStoryboard(name: StoryboardName.main, bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: MainViewController.className)
-                as? MainViewController else { return }
-        let nav =  UINavigationController(rootViewController: vc)
-
-        let index = tamagotchi?.identificationNumber
-
-        
+        guard let mainViewController = sb.instantiateViewController(withIdentifier: MainViewController.className)
+        as? MainViewController else { return }
+        let nav =  UINavigationController(rootViewController: mainViewController)
         sceneDelegate?.window?.rootViewController = nav
         sceneDelegate?.window?.makeKeyAndVisible()
+        
+        
+        UserDefaultsManager.standard.identificationNumber = tamagotchiObject?.identificationNumber ?? 0
+        mainViewController.tamagotchiObject = tamagotchiObject
         
         self.present(nav, animated: true)
     }
 
+    
     @IBAction func tappedCancelButton(_ sender: UIButton) {
         self.dismiss(animated: true)
     }

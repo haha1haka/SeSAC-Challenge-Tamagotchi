@@ -10,7 +10,7 @@ import UIKit
 extension UILabel {
     
     func myNomalLabelSet() {
-        self.font = UIFont.systemFont(ofSize: 13,weight: .bold)
+        self.font = UIFont.systemFont(ofSize: 13,weight: .medium)
         self.textAlignment = .center
         self.textColor = MyColor.textColor
     }

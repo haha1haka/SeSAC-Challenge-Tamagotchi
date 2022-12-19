@@ -12,9 +12,9 @@ class IntroCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    func configureCellUI(data: Tamagotchi) {
+    func configureCellUI(data: TamagotchiObjet) {
         
-        guard let image = data.image.first else { return }
+        guard let image = data.image.last else { return }
         imageView.image = UIImage(named: image)
         
         nameLabel.text = data.name
